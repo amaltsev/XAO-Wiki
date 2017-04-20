@@ -1,4 +1,4 @@
-package testcases::WikiBase;
+package testcases::Wiki::WikiBase;
 use strict;
 use XAO::Utils;
 use XAO::Objects;
@@ -61,7 +61,7 @@ EOT
     $self->assert($html eq $expect,
                   "Wiki::Render1 - expected '$expect', got '$html'");
 }
- 
+
 ###############################################################################
 
 sub test_storage {
@@ -78,7 +78,7 @@ sub test_storage {
                   "Expected to have /Wiki in the structure definition");
     $self->assert($ds{'Wiki'}->{'structure'}->{'Revisions'} && $ds{'Wiki'}->{'structure'}->{'Revisions'}->{'class'} eq 'Data::WikiRevision',
                   "Expected to have /Wiki/Revisions in the structure definition");
-                
+
     $wiki->build_structure;
 
     my $odb=$self->siteconfig->odb;

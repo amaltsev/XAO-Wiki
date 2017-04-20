@@ -1,4 +1,4 @@
-package testcases::WikiParser;
+package testcases::Wiki::WikiParser;
 use strict;
 use XAO::Utils;
 use XAO::Objects;
